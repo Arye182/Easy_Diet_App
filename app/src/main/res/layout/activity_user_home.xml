@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/button_history_weights"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="History of weights"/>
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_navigation"/>
 
-    <Button
-        android:id="@+id/button_my_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My Profile"/>
-
-    <Button
-        android:id="@+id/button_enter_new_weight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="enter new weight"/>
-
-    <Button
-        android:id="@+id/button_help"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="help"/>
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

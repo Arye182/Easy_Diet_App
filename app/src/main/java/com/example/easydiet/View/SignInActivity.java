@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 import com.example.easydiet.R;
 import com.example.easydiet.View.User.UserHomeActivity;
+import com.example.easydiet.View.User.UserHomeFragment;
 
 
 public class SignInActivity extends AppCompatActivity {
