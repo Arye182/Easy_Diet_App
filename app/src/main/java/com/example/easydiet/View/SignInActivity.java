@@ -1,12 +1,16 @@
 package com.example.easydiet.View;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 import com.example.easydiet.R;
+import com.example.easydiet.View.User.UserHomeActivity;
 
 
 public class SignInActivity extends AppCompatActivity {
@@ -39,9 +43,15 @@ public class SignInActivity extends AppCompatActivity {
           @Override
           public void onClick(View view){
               // TODO Save to database
+              openUserHome();
               Log.i(TAG, "Saving New User: firstName: " + firstName.getText().toString());
           }
         });
 
+    }
+
+    public void openUserHome(){
+        Intent intent = new Intent(this, UserHomeActivity.class);
+        startActivity(intent);
     }
 }
