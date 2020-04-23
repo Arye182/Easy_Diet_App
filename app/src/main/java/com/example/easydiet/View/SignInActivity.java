@@ -15,8 +15,7 @@ import android.widget.Toast;
 import com.example.easydiet.Model.WeightEntity;
 import com.example.easydiet.R;
 import com.example.easydiet.View.User.AddWeightFragment;
-import com.example.easydiet.View.User.UserHomeActivity;
-import com.example.easydiet.View.User.UserHomeFragment;
+import com.example.easydiet.View.User.UserActivity;
 import com.example.easydiet.ViewModel.WeightViewModel;
 
 
@@ -61,7 +60,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void openUserHome(){
-        Intent intent = new Intent(this, UserHomeActivity.class);
+        Intent intent = new Intent(this, UserActivity.class);
         startActivity(intent);
     }
 

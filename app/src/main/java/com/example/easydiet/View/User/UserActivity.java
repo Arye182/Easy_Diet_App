@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 
-public class UserHomeActivity extends AppCompatActivity implements AddWeightFragment.AddWeightFragmentListener {
+public class UserActivity extends AppCompatActivity implements AddWeightFragment.AddWeightFragmentListener {
     public static final int ADD_WEIGHT_REQUEST = 1;
     UserWeightsHistoryFragment uwhf;
     UserHomeFragment uhf;

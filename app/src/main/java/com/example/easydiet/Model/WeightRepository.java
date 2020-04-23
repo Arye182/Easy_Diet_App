@@ -30,7 +30,7 @@ public class WeightRepository {
     }
 
     public void deleteAllNotes () {
-        new DeleteWeightEntityAsyncTask(weightDao).execute();
+        new DeleteAllWeightEntityAsyncTask(weightDao).execute();
     }
 
     public LiveData<List<WeightEntity>> getAllWeights() {
@@ -65,12 +65,14 @@ public class WeightRepository {
         private DeleteWeightEntityAsyncTask(WeightDao weightDao) {
             this.weightDao = weightDao;
         }
+
         @Override
         protected Void doInBackground(WeightEntity... weightEntities) {
             weightDao.delete(weightEntities[0]);
             return null;
         }
     }
+
     private static class DeleteAllWeightEntityAsyncTask extends AsyncTask<Void, Void, Void> {
         private WeightDao weightDao;
         private DeleteAllWeightEntityAsyncTask(WeightDao weightDao) {

@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +17,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -38,14 +42,11 @@ public class UserWeightsHistoryFragment extends Fragment {
     public static final int ADD_WEIGHT_REQUEST = 1;
     private WeightViewModel weightViewModel;
 
-
-
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         weightViewModel = new ViewModelProvider(requireActivity()).get(WeightViewModel.class);
+        setHasOptionsMenu(true);
     }
 
     @Nullable
@@ -57,11 +58,7 @@ public class UserWeightsHistoryFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         requireActivity().setTitle("Your Weight History");
-
-
-
         // FB
         FloatingActionButton buttonAddWeight = view.findViewById(R.id.button_add_weight);
         buttonAddWeight.setOnClickListener(new View.OnClickListener() {
@@ -97,22 +94,51 @@ public class UserWeightsHistoryFragment extends Fragment {
         } catch (Exception e) {
             Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
+        // touch swipe and delete
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                  weightViewModel.delete(adapter.getWeightAt(viewHolder.getAdapterPosition()));
+                Toast.makeText(getActivity(), "Weight Deleted!", Toast.LENGTH_SHORT).show();
+            }
+        }).attachToRecyclerView(recyclerView);
     }
 
-
-
     public void updateResult(@Nullable Intent data) {
-
 
         assert data != null;
         String weight = data.getStringExtra(AddWeightFragment.EXTRA_WEIGHT);
         String date = data.getStringExtra(AddWeightFragment.EXTRA_DATE);
-
         assert weight != null;
         WeightEntity newWeight = new WeightEntity(Double.parseDouble(weight), date);
         weightViewModel.insert(newWeight);
         Toast.makeText(getActivity(), "Weight Saved!", Toast.LENGTH_SHORT).show();
 
+    }
 
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.user_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.delete_all_weights:
+                weightViewModel.deleteAllWeights();
+                Toast.makeText(getActivity(), "All Notes Deleted!", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

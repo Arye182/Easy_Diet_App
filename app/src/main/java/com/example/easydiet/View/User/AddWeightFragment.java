@@ -60,7 +60,6 @@ public class AddWeightFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         this.date = view.findViewById(R.id.edit_text_new_date);
         this.weight = view.findViewById(R.id.edit_text_new_weight);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
         requireActivity().setTitle("Add Weight");
     }
 
@@ -82,6 +81,12 @@ public class AddWeightFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.save_weight:
                 saveWeight();
+                return true;
+            case R.id.close_save_weight:
+                Toast.makeText(getActivity(), "Item Was Not Saved!", Toast.LENGTH_SHORT).show();
+
+                requireActivity().onBackPressed();
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

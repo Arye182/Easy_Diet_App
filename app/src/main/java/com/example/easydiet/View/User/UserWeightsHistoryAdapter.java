@@ -46,6 +46,10 @@ public class UserWeightsHistoryAdapter extends RecyclerView.Adapter<UserWeightsH
         notifyDataSetChanged();
     }
 
+    public WeightEntity getWeightAt(int position) {
+        return weights.get(position);
+    }
+
 
     class WeightsViewHolder extends RecyclerView.ViewHolder{
         private TextView dateValue;
