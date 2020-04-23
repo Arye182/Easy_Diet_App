@@ -12,51 +12,39 @@ public class WeightEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    private double value;
+    private double weight;
 
-    private Date date;
+    private String date;
 
-    private Time time;
 
-    private int priority;
 
-    public WeightEntity(double value) {
-        this.value = value;
+    public WeightEntity(double weight, String date) {
+        this.weight = weight;
+        this.date = date;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public void setTime(Time time) {
-        this.time = time;
-    }
-
-    public void setPriority(int priority) {
-        this.priority = priority;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     public int getId() {
         return id;
     }
 
-    public double getValue() {
-        return value;
+    public double getWeight() {
+        return weight;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public Time getTime() {
-        return time;
-    }
-
-    public int getPriority() {
-        return priority;
-    }
 }

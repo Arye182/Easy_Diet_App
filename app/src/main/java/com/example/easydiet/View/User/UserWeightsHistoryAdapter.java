@@ -6,55 +6,54 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.easydiet.Model.WeightEntity;
 import com.example.easydiet.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
-class UserWeightsHistoryAdapter extends RecyclerView.Adapter {
+public class UserWeightsHistoryAdapter extends RecyclerView.Adapter<UserWeightsHistoryAdapter.WeightsViewHolder> {
+
+    private List<WeightEntity> weights = new ArrayList<>();
 
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+    public WeightsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView  = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.user_weight_row, parent, false);
+        return new WeightsViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull WeightsViewHolder holder, int position) {
+        WeightEntity currentWeight = weights.get(position);
+        holder.weightValue.setText(String.valueOf(currentWeight.getWeight()));
+        holder.dateValue.setText(currentWeight.getDate());
     }
+
 
     @Override
     public int getItemCount() {
-        return 0;
+        return weights.size();
     }
 
 
-    private class WeightsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public void setWeights(List<WeightEntity> weights) {
+        this.weights = weights;
+        notifyDataSetChanged();
+    }
 
+
+    class WeightsViewHolder extends RecyclerView.ViewHolder{
         private TextView dateValue;
         private TextView weightValue;
-
-
         public WeightsViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.dateValue = (TextView) itemView.findViewById(R.id.date_value);
-            this.weightValue = (TextView) itemView.findViewById(R.id.weight_value);
-            itemView.setOnClickListener(this);
-        }
-
-        public void bindView (int position){
-
-        }
-
-        @Override
-        public void onClick(View v) {
-
+            dateValue = (TextView) itemView.findViewById(R.id.date_value);
+            weightValue = (TextView) itemView.findViewById(R.id.weight_value);
         }
     }
 }
