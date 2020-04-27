@@ -2,7 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/delete_all_weights"
-        android:title="Delete All Weights"
+        android:id="@+id/Boozy_Goozy"
+        android:title="Boozy Goozy"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/my_profile"
+        android:title="My Profile"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/matrixa"
+        android:title="Matrixa"
         app:showAsAction="never"/>
 </menu>

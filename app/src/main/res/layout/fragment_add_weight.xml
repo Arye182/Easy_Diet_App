@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".View.User.AddWeightFragment"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center_horizontal">
+    tools:context=".View.User.AddWeightFragment"
+    android:background="@color/brown_light">
 
-    <!-- TODO: Update blank fragment layout -->
-
-<EditText
-    android:id="@+id/edit_text_new_date"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Date"
-    android:inputType="date"/>
+    <EditText
+        android:id="@+id/edit_text_new_date"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_margin="8dp"
+        android:hint="Date"
+        android:inputType="date" />
 
     <EditText
         android:id="@+id/edit_text_new_weight"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="41dp"
+        android:layout_margin="8dp"
         android:hint="Weight"
-        android:inputType="number"/>
-
-
-
+        android:inputType="number" />
 
 </LinearLayout>

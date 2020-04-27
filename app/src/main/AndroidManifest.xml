@@ -4,13 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/EasyDietLight">
+        <activity android:name=".View.Entrance.LoginActivity"></activity>
         <activity android:name=".View.User.UserActivity" />
-        <activity android:name=".View.SignInActivity" />
+        <activity android:name=".View.Entrance.SignInActivity" />
         <activity android:name=".View.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

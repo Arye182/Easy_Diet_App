@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
+    <include layout="@layout/toolbar"
+        android:id="@+id/home_toolbar_in_fragment"/>
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/home_toolbar_in_fragment"
         android:layout_above="@id/bottom_navigation"/>
 
 
@@ -18,7 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_navigation"/>
+        android:background="@color/brown_light"
+        android:elevation="4dp"
+        app:menu="@menu/bottom_navigation" />
 
 </com.google.android.material.circularreveal.CircularRevealRelativeLayout>

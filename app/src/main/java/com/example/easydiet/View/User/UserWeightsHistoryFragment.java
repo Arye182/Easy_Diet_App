@@ -58,8 +58,9 @@ public class UserWeightsHistoryFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        requireActivity().setTitle("Your Weight History");
-        // FB
+        requireActivity().setTitle("Your Weight History:");
+
+        // add weight floating button
         FloatingActionButton buttonAddWeight = view.findViewById(R.id.button_add_weight);
         buttonAddWeight.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +77,7 @@ public class UserWeightsHistoryFragment extends Fragment {
             }
         });
 
-        // recycle View
+        // recycle View of weight cards history
         RecyclerView recyclerView = view.findViewById(R.id.weights_history_list);
         recyclerView.setLayoutManager((new LinearLayoutManager(getActivity())));
         recyclerView.setHasFixedSize(true);
@@ -125,7 +126,7 @@ public class UserWeightsHistoryFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        inflater.inflate(R.menu.user_menu, menu);
+        inflater.inflate(R.menu.weight_history_menu, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 

@@ -23,7 +23,7 @@ public class UserWeightsHistoryAdapter extends RecyclerView.Adapter<UserWeightsH
     @Override
     public WeightsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView  = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.user_weight_row, parent, false);
+                .inflate(R.layout.weight_card, parent, false);
         return new WeightsViewHolder(itemView);
     }
 

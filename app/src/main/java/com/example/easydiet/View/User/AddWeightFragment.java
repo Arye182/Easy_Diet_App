@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -61,11 +62,13 @@ public class AddWeightFragment extends Fragment {
         this.date = view.findViewById(R.id.edit_text_new_date);
         this.weight = view.findViewById(R.id.edit_text_new_weight);
         requireActivity().setTitle("Add Weight");
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_weight, container, false);
     }
@@ -74,6 +77,7 @@ public class AddWeightFragment extends Fragment {
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.add_weight_menu, menu);
+
     }
 
     @Override

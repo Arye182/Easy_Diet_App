@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".View.User.UserWeightsHistoryFragment"
-    android:background="@android:color/holo_purple">
+    >
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/weights_history_list"
-        tools:listitem="@layout/user_weight_row"/>
+        tools:listitem="@layout/weight_card"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button_add_weight"

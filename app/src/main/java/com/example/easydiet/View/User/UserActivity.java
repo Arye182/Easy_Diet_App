@@ -2,18 +2,21 @@ package com.example.easydiet.View.User;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.example.easydiet.R;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 
 
 public class UserActivity extends AppCompatActivity implements AddWeightFragment.AddWeightFragmentListener {
@@ -28,6 +31,7 @@ public class UserActivity extends AppCompatActivity implements AddWeightFragment
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
 
+
         // bottom navigation initialization
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -35,6 +39,10 @@ public class UserActivity extends AppCompatActivity implements AddWeightFragment
         // fragments
         uwhf = new UserWeightsHistoryFragment();
         uhf = new UserHomeFragment();
+
+        // toolbar
+        Toolbar toolbar = findViewById(R.id.home_toolbar_in_fragment);
+        setSupportActionBar(toolbar);
 
         // start home user fragment as default
         getSupportFragmentManager()
@@ -75,4 +83,11 @@ public class UserActivity extends AppCompatActivity implements AddWeightFragment
     public void onInputWeightSent(Intent data) {
         uwhf.updateResult(data);
     }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.user_menu, menu);
+//        return true;
+//    }
 }

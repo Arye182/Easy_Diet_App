@@ -9,9 +9,11 @@ import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.easydiet.R;
+import com.example.easydiet.View.Entrance.LoginActivity;
+import com.example.easydiet.View.Entrance.SignInActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,13 +22,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // data members
     private static final String TAG="MyMessage";
-    private Button signIn;
+    private TextView signIn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        signIn = (Button) findViewById(R.id.button_signin);
+        signIn = findViewById(R.id.button_signin);
         signIn.setOnClickListener(this);
         Log.i(TAG, "onCreate");
     }
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_login:
-
+                openLogWindow();
                 break;
             case R.id.button_signin:
                 openSignInWindow();
@@ -49,6 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(this, SignInActivity.class);
         startActivity(intent);
     }
+
+    private void openLogWindow() {
+        Log.i(TAG, "openLogWindow");
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+
 
     // main app methods
 
