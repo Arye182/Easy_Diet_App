@@ -6,8 +6,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="24dp"
-    tools:context=".View.User.AddWeightFragment"
-    android:background="@color/brown_light">
+    tools:context=".View.User.AddWeightFragment">
 
     <EditText
         android:id="@+id/edit_text_new_date"

@@ -23,6 +23,7 @@ public class UserActivity extends AppCompatActivity implements AddWeightFragment
     public static final int ADD_WEIGHT_REQUEST = 1;
     UserWeightsHistoryFragment uwhf;
     UserHomeFragment uhf;
+    SettingsFragment sf;
 
 
 
@@ -39,6 +40,7 @@ public class UserActivity extends AppCompatActivity implements AddWeightFragment
         // fragments
         uwhf = new UserWeightsHistoryFragment();
         uhf = new UserHomeFragment();
+        sf = new SettingsFragment();
 
         // toolbar
         Toolbar toolbar = findViewById(R.id.home_toolbar_in_fragment);
@@ -61,6 +63,9 @@ public class UserActivity extends AppCompatActivity implements AddWeightFragment
                     break;
                 case R.id.nav_weight:
                     selectedFragment = uwhf;
+                    break;
+                case R.id.nav_settings:
+                    selectedFragment = sf;
                     break;
             }
             assert selectedFragment != null;

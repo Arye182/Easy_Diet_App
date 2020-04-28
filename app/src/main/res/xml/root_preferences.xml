@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/prefCategory_general">
+
+        <CheckBoxPreference
+            android:key="pref_example_checkbox"
+            android:title="@string/pref_exampleCheckbox_title"
+            android:summaryOn="@string/pref_exampleCheckbox_summaryOn"
+            android:summaryOff="@string/pref_exampleCheckbox_summaryOff"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/prefCategory_notifications">
+
+        <SwitchPreference
+            android:key="pref_enable_notifications"
+            android:title="@string/pref_notificationToggle"
+            android:defaultValue="true" />
+
+        <EditTextPreference
+            android:key="pref_notification_time"
+            android:title="@string/pref_notificationTime"
+            android:summary="@string/pref_notificationTime_summary"
+            android:inputType="number"
+            android:dialogMessage="@string/pref_notificationTime_dialog"
+            android:defaultValue="5" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/prefCategory_about">
+
+        <Preference
+            android:key="pref_about_licenses"
+            android:title="@string/pref_licenses"
+/>
+
+        <Preference
+            android:key="pref_about_app_version"
+            android:title="@string/pref_appVersion" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
