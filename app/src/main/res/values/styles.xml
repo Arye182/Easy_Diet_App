@@ -1,43 +1,36 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your theme here. -->
-    </style>
-
-    <style name="EasyDietLight" parent="AppBaseTheme">
-        <!-- default background -->
-        <item name="android:windowBackground">@color/colorBackground</item>
-        <item name="android:colorBackground">@color/colorBackground</item>
-        <!-- default font -->
-        <item name="fontFamily">@font/montserrat_regular</item>
-        <!-- You can change the text color in all widgets across the whole app -->
-        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
-        <!--   color for the app bar and other primary UI elements -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <!--   a darker variant of the primary color, used for
-       the status bar (on Android 5.0+) and contextual app bars -->
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <!--   a secondary color for controls like checkboxes and text fields -->
-        <item name="colorAccent">@color/colorAccent</item>
-        <!-- others -->
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="android:buttonStyle">@style/ButtonStyle</item>
-        <!-- edit texts -->
-        <item name="android:editTextBackground">@drawable/fill_text</item>
-        <item name="android:editTextColor">@color/colorBackground</item>
-    </style>
-
     <!-- general button green -->
-    <style name="ButtonStyle">
-        <item name="android:background">@drawable/button</item>
-        <item name="android:layout_width">300dp</item>
-        <item name="android:layout_height">41dp</item>
-        <item name="android:padding">8dp</item>
-        <item name="android:layout_gravity">center_vertical</item>
+    <style name="Widget.MyTheme.Button" parent="Widget.MaterialComponents.Button">
+        <!--Your custom shape here-->
         <item name="textAllCaps">false</item>
-        <item name="android:textColor">@color/colorBackground</item>
-        <item name="android:textSize">22sp</item>
     </style>
+
+    <!--Components-->
+
+    <!--Bottom Sheets-->
+    <style name="ThemeOverlay.MyTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.MyTheme.BottomSheet.Modal</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="bottomSheetStyle">@style/Widget.MyTheme.BottomSheet.Modal</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+<!--        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">@android:color/transparent</item>-->
+    </style>
+
+
+    <style name="Widget.MyTheme.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">?attr/shapeAppearanceLargeComponent</item>
+    </style>
+
+    <!--Navigation Drawer-->
+    <style name="Widget.MyTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">?attr/textAppearanceBody2</item>
+    </style>
+
+    <style name="myCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/design_default_color_secondary</item>
+    </style>
+
 </resources>

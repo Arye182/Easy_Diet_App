@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headline 1"
+        style="@style/TextAppearance.MyTheme.Headline1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headline 2"
+        style="@style/TextAppearance.MyTheme.Headline2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headline 3"
+        style="@style/TextAppearance.MyTheme.Headline3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headline 4"
+        style="@style/TextAppearance.MyTheme.Headline4"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headline 5"
+        style="@style/TextAppearance.MyTheme.Headline5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="subtitle 1"
+        style="@style/TextAppearance.MyTheme.Subtitle1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="subtitle 2"
+        style="@style/TextAppearance.MyTheme.Subtitle2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="body1"
+        style="@style/TextAppearance.MyTheme.Subtitle2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="subtitle 2"
+        style="@style/TextAppearance.MyTheme.Body1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="body2"
+        style="@style/TextAppearance.MyTheme.Body2"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

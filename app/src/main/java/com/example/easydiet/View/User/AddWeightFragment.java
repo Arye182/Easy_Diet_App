@@ -24,6 +24,11 @@ import android.widget.Toast;
 
 import com.example.easydiet.R;
 
+import java.text.DateFormat;
+import java.text.DateFormatSymbols;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.Objects;
 
 public class AddWeightFragment extends Fragment {
@@ -32,13 +37,23 @@ public class AddWeightFragment extends Fragment {
             "com.example.easydiet.View.User.EXTRA_WEIGHT";
     public static final String EXTRA_DATE =
             "com.example.easydiet.View.User.EXTRA_DATE";
-
-
+    public static final String EXTRA_DATE_TIME =
+            "com.example.easydiet.View.User.EXTRA_DATE_TIME";
+    public static final String EXTRA_DAY =
+            "com.example.easydiet.View.User.EXTRA_DAY";
+    public static final String EXTRA_TIME =
+            "com.example.easydiet.View.User.EXTRA_TIME";
     private static final int RESULT_OK = -1 ;
 
 
     private EditText date;
     private EditText weight;
+    private String day;
+    private EditText time;
+
+    Calendar calendar = Calendar.getInstance();
+
+
 
     private AddWeightFragmentListener listener;
 
@@ -61,6 +76,31 @@ public class AddWeightFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         this.date = view.findViewById(R.id.edit_text_new_date);
         this.weight = view.findViewById(R.id.edit_text_new_weight);
+        //this.day = view.findViewById(R.id.day);
+
+        // DATE
+        // 00/00/0000
+        String CurrentTime = DateFormat.getDateInstance(DateFormat.DATE_FIELD).format(calendar.getTime());
+        // yyyy-MM-dd'T'HH:mm:ss.SSSXXX
+        String CurrentDate = new SimpleDateFormat( "yyyy-MM-dd'T'HH:mm:ss.SSSXXX" ).format(Calendar.getInstance().getTime());
+        this.date.setText(CurrentTime);
+
+
+        // DAY
+        DateFormatSymbols dfs = new DateFormatSymbols(Locale.ENGLISH);
+        String weekdays[] = dfs.getWeekdays();
+        Calendar cal = Calendar.getInstance();
+        int day = cal.get(Calendar.DAY_OF_WEEK);
+        this.day = weekdays[day];
+
+
+
+
+
+
+
+
+
         requireActivity().setTitle("Add Weight");
 
     }
@@ -100,6 +140,7 @@ public class AddWeightFragment extends Fragment {
     private void saveWeight() {
         String weight = this.weight.getText().toString();
         String date = this.date.getText().toString();
+        String day = this.day;
         if(weight.trim().isEmpty() || date.trim().isEmpty()) {
             Toast.makeText(getActivity(), "Please insert a weight and date", Toast.LENGTH_SHORT).show();
             return;
@@ -107,6 +148,7 @@ public class AddWeightFragment extends Fragment {
         Intent data = new Intent();
         data.putExtra(EXTRA_WEIGHT, weight);
         data.putExtra(EXTRA_DATE, date);
+        data.putExtra(EXTRA_DAY, day);
         listener.onInputWeightSent(data);
         requireActivity().onBackPressed();
 

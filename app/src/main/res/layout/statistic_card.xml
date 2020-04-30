@@ -9,7 +9,7 @@
     android:layout_marginEnd="8dp" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:elevation="8dp"
@@ -39,31 +39,19 @@
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_password" />
+            app:layout_constraintTop_toBottomOf="@+id/statistic" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/user_name_full"
+            android:id="@+id/statistic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
-            android:text="Full Name:"
+            android:layout_marginTop="10dp"
+            android:text="Statistics:"
             android:textSize="24sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/user_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
-            android:text="Password:"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_name_full" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/user_bmi"

@@ -32,6 +32,7 @@ public class UserWeightsHistoryAdapter extends RecyclerView.Adapter<UserWeightsH
         WeightEntity currentWeight = weights.get(position);
         holder.weightValue.setText(String.valueOf(currentWeight.getWeight()));
         holder.dateValue.setText(currentWeight.getDate());
+        holder.dayValue.setText(currentWeight.getDay());
     }
 
 
@@ -54,10 +55,12 @@ public class UserWeightsHistoryAdapter extends RecyclerView.Adapter<UserWeightsH
     class WeightsViewHolder extends RecyclerView.ViewHolder{
         private TextView dateValue;
         private TextView weightValue;
+        private TextView dayValue;
         public WeightsViewHolder(@NonNull View itemView) {
             super(itemView);
             dateValue = (TextView) itemView.findViewById(R.id.date_value);
             weightValue = (TextView) itemView.findViewById(R.id.weight_value);
+            dayValue = (TextView) itemView.findViewById(R.id.day);
         }
     }
 }

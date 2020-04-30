@@ -4,44 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/welcome_background"
+    android:background="@color/primaryDarkColor"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".View.MainActivity">
+    tools:context=".View.MainActivity"     android:padding="24dp"
+    >
 
 
     <TextView
         android:id="@+id/Welcome"
+        style="@style/TextAppearance.MyTheme.Headline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Easy Diet!"
-        android:textColor="@color/colorBackground"
-        android:textSize="65sp"
-        android:textStyle="bold"
+        android:text="Easy Diet"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white_50"/>
 
     <TextView
         android:id="@+id/nice_to_see"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="NiceTo See You Again!"
-        android:textColor="@color/colorBackground"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:text="Nice To See You Again, User"
+        style="@style/TextAppearance.MyTheme.Subtitle2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Welcome" />
+        app:layout_constraintTop_toBottomOf="@+id/Welcome"
+        android:textColor="@color/white_50"/>
 
     <Button
         android:id="@+id/button_login"
         android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:gravity="center_vertical"
         android:onClick="onClick"
@@ -57,30 +57,24 @@
         android:id="@+id/button_signin"
         android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:clickable="true"
         android:gravity="center_vertical"
         android:onClick="onClick"
         android:text="Register"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/all_rights_reserved"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="RtlCompat" />
 
-    <TextView
-        android:id="@+id/all_rights_reserved"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="All Rights Reserved AMSY - Company "
-        android:textColor="@color/colorBackground"
-        android:textSize="16sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/app_icon"
+        app:layout_constraintBottom_toTopOf="@+id/button_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nice_to_see" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

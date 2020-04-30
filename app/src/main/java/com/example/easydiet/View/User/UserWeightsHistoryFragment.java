@@ -58,7 +58,7 @@ public class UserWeightsHistoryFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        requireActivity().setTitle("Your Weight History:");
+        requireActivity().setTitle("Weight History");
 
         // add weight floating button
         FloatingActionButton buttonAddWeight = view.findViewById(R.id.button_add_weight);
@@ -117,8 +117,9 @@ public class UserWeightsHistoryFragment extends Fragment {
         assert data != null;
         String weight = data.getStringExtra(AddWeightFragment.EXTRA_WEIGHT);
         String date = data.getStringExtra(AddWeightFragment.EXTRA_DATE);
+        String day = data.getStringExtra(AddWeightFragment.EXTRA_DAY);
         assert weight != null;
-        WeightEntity newWeight = new WeightEntity(Double.parseDouble(weight), date);
+        WeightEntity newWeight = new WeightEntity(Double.parseDouble(weight), date, day);
         weightViewModel.insert(newWeight);
         Toast.makeText(getActivity(), "Weight Saved!", Toast.LENGTH_SHORT).show();
 

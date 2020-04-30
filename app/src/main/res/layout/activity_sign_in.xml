@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="24dp"
@@ -17,9 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Sign In"
-        android:textColor="@color/colorBackground"
-        android:textSize="65sp"
-        android:textStyle="bold"
+style="@style/TextAppearance.MyTheme.Headline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button"
@@ -118,15 +115,13 @@
         android:id="@+id/button_saveContinue"
         android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:text="Sign Up!"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/button"
         android:layout_width="24dp"
         android:layout_height="24dp"

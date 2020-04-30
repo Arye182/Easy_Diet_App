@@ -24,6 +24,7 @@ public interface WeightDao {
     @Query("DELETE FROM weight_table")
     void deleteAllNotes();
 
+    //@Query("SELECT * FROM weight_table ORDER BY date(date) DESC Limit 1")
     @Query("SELECT * FROM weight_table")
     LiveData<List<WeightEntity>> getAllNotes();
 

@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -29,6 +30,10 @@ import java.util.List;
 public class UserHomeFragment extends Fragment {
     private UserViewModel userViewModel;
     ArrayList<String> users;
+    private RecyclerView userRecyclerView;
+    private RecyclerView.Adapter uAdapter;
+    private RecyclerView.LayoutManager uLayoutManager;
+
 
 
     @Override

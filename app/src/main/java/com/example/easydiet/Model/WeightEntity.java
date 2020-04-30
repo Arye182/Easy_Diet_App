@@ -1,9 +1,12 @@
 package com.example.easydiet.Model;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.sql.Time;
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity(tableName = "weight_table")
@@ -16,11 +19,12 @@ public class WeightEntity {
 
     private String date;
 
+    private String day;
 
-
-    public WeightEntity(double weight, String date) {
+    public WeightEntity(double weight, String date, String day) {
         this.weight = weight;
         this.date = date;
+        this.day = day;
     }
 
     public void setId(int id) {
@@ -45,6 +49,14 @@ public class WeightEntity {
 
     public String getDate() {
         return date;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public String getDay() {
+        return day;
     }
 
 }

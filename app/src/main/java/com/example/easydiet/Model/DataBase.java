@@ -45,8 +45,7 @@ public abstract class DataBase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            weightDao.insert(new WeightEntity(95.3, "10/3/2020"));
-            weightDao.insert(new WeightEntity(90.3, "10/3/2020"));
+            weightDao.insert(new WeightEntity(90, "10/2/2020", "tus"));
             return null;
         }
     }

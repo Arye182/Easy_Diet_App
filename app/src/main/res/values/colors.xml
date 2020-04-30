@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryDark">#032B43</color>
-    <color name="colorPrimary">#005582</color>
-    <color name="colorPrimaryLight">#0086AD</color>
-    <color name="colorSecondary">#00C2C7</color>
-    <color name="colorAccent">#97EBDB</color>
-    <color name="colorBackground">#FFFFFF</color>
-    <color name="colorCard">#B1B1B1</color>
-    <color name="colorCardText">#303030</color>
+<!--    <color name="colorPrimaryDark">#032B43</color>-->
+<!--    <color name="colorPrimary">#005582</color>-->
+<!--    <color name="colorPrimaryLight">#0086AD</color>-->
+<!--    <color name="colorSecondary">#00C2C7</color>-->
+<!--    <color name="colorAccent">#97EBDB</color>-->
+<!--    <color name="colorBackground">#FFFFFF</color>-->
+<!--    <color name="colorCard">#B1B1B1</color>-->
+<!--    <color name="colorCardText">#303030</color>-->
+
+
+
+    <!-- pallete -->
+    <color name="purple_200">#bb86fc</color> <!--Color primary (dark)-->
+    <color name="purple_600">#4b01d0</color> <!--Color primary variant (dark)-->
+
+    <color name="purple_500">#6200ee</color> <!--Color primary (light)-->
+    <color name="purple_700">#3700b3</color> <!--Color primary variant (light)-->
+
+    <color name="red_200">#cf6679</color> <!--Color error (dark)-->
+    <color name="red_600">#b00020</color> <!--Color error (light)-->
+
+    <!-- Mutule -->
+    <color name="green_200">#03dac6</color> <!--Color secondary-->
+    <color name="green_500">#018786</color> <!--Color secondary variant-->
+
+    <!--Color surface (light), color on error (light), -->
+    <!--color on surface (dark), color on surface (dark)-->
+    <color name="white_50">#ffffff</color>
+
+    <color name="black_800">#121212</color> <!--Color surface (dark)-->
+    <!--Color on secondary (light), color on background (light),-->
+    <!--color on surface (light)-->
+    <color name="black_900">#000000</color>
+
+
+
+
+
+    <color name="primaryColor">#344955</color>
+    <color name="primaryLightColor">#5f7481</color>
+    <color name="primaryDarkColor">#0b222c</color>
+    <color name="secondaryColor">#f9aa33</color>
+    <color name="secondaryLightColor">#ffdc65</color>
+    <color name="secondaryDarkColor">#c17b00</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="backgroundColor">#EDF0F2</color>
+
+
+
 </resources>
