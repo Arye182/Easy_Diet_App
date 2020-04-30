@@ -1,67 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ MIT License
-  ~
   ~ Copyright (c) 2020 Arye182
   ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
+  ~    Licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
   ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
+  ~        http://www.apache.org/licenses/LICENSE-2.0
   ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
+  ~    Unless required by applicable law or agreed to in writing, software
+  ~    distributed under the License is distributed on an "AS IS" BASIS,
+  ~    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~    See the License for the specific language governing permissions and
+  ~    limitations under the License.
   -->
 
 <resources>
-<!--    <color name="colorPrimaryDark">#032B43</color>-->
-<!--    <color name="colorPrimary">#005582</color>-->
-<!--    <color name="colorPrimaryLight">#0086AD</color>-->
-<!--    <color name="colorSecondary">#00C2C7</color>-->
-<!--    <color name="colorAccent">#97EBDB</color>-->
-<!--    <color name="colorBackground">#FFFFFF</color>-->
-<!--    <color name="colorCard">#B1B1B1</color>-->
-<!--    <color name="colorCardText">#303030</color>-->
-
-
-
     <!-- pallete -->
-    <color name="purple_200">#bb86fc</color> <!--Color primary (dark)-->
-    <color name="purple_600">#4b01d0</color> <!--Color primary variant (dark)-->
-
-    <color name="purple_500">#6200ee</color> <!--Color primary (light)-->
-    <color name="purple_700">#3700b3</color> <!--Color primary variant (light)-->
-
-    <color name="red_200">#cf6679</color> <!--Color error (dark)-->
-    <color name="red_600">#b00020</color> <!--Color error (light)-->
-
-    <!-- Mutule -->
-    <color name="green_200">#03dac6</color> <!--Color secondary-->
-    <color name="green_500">#018786</color> <!--Color secondary variant-->
-
-    <!--Color surface (light), color on error (light), -->
-    <!--color on surface (dark), color on surface (dark)-->
-    <color name="white_50">#ffffff</color>
-
-    <color name="black_800">#121212</color> <!--Color surface (dark)-->
-    <!--Color on secondary (light), color on background (light),-->
-    <!--color on surface (light)-->
-    <color name="black_900">#000000</color>
-
-
-
-
-
     <color name="primaryColor">#344955</color>
     <color name="primaryLightColor">#5f7481</color>
     <color name="primaryDarkColor">#0b222c</color>
@@ -71,7 +26,13 @@
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
     <color name="backgroundColor">#EDF0F2</color>
-
-
-
+    <color name="red_200">#cf6679</color> <!--Color error (dark)-->
+    <color name="red_600">#b00020</color> <!--Color error (light)-->
+    <!--Color surface (light), color on error (light), -->
+    <!--color on surface (dark), color on surface (dark)-->
+    <color name="white_50">#ffffff</color>
+    <color name="black_800">#121212</color> <!--Color surface (dark)-->
+    <!--Color on secondary (light), color on background (light),-->
+    <!--color on surface (light)-->
+    <color name="black_900">#000000</color>
 </resources>
